@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Glass Cloud | Ancient Craft, Modern Forms</title>
+    <link rel="shortcut icon" type="image/png" href="img/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div id="preloader">
+        <div class="preloader-crystal"></div>
+        <div class="preloader-shape"></div>
+    </div>
+
+    <div id="light-effect-wrapper"></div>
+
+    <nav class="nav">
+        <div class="nav__container nav__container--left">
+            <ul class="nav__links-desktop">
+                <li><a class="nav__link" href="index.html">Home</a></li>
+                <li class="nav__item--dropdown">
+                    <a class="nav__link" href="products.html">Shop</a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-column">
+                            <a href="products.html?category=Vases">Vases</a>
+                            <a href="products.html?category=Glassware">Glassware</a>
+                            <a href="products.html?category=Decor">Decor</a>
+                        </div>
+                        <div class="dropdown-column">
+                            <a href="products.html?category=Bowls">Bowls</a>
+                            <a href="products.html?category=Candleholders">Candleholders</a>
+                            <a href="products.html?category=Gift Sets">Gift Sets</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="nav__container nav__container--center">
+             <a href="index.html" class="nav__logo-center">GlassCloud</a>
+        </div>
+        <div class="nav__container nav__container--right">
+            <ul class="nav__links-desktop">
+                <li><a class="nav__link" href="about.html">About</a></li>
+            </ul>
+             <button class="nav__toggle" aria-label="Open navigation">
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </button>
+            <div class="nav__actions">
+                <button class="nav__action-btn" id="search-btn" aria-label="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+                <button class="nav__action-btn" id="account-btn" aria-label="Account">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </button>
+                <button class="nav__action-btn" id="cart-btn" aria-label="Cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="nav__mobile">
+        <ul class="nav__mobile-links">
+            <li><a class="nav__mobile-link" href="index.html">Home</a></li>
+            <li><a class="nav__mobile-link" href="products.html">Shop</a></li>
+            <li><a class="nav__mobile-link" href="about.html">About</a></li>
+        </ul>
+    </div>
+
+    <div class="search-overlay">
+        <button class="search-overlay__close">&times;</button>
+        <div class="search-overlay__content">
+            <input type="search" placeholder="Search for products..." class="search-overlay__input">
+            <div id="search-results-container"></div>
+        </div>
+    </div>
+    
+    <main id="main-content">
+        <section id="home" class="hero-section">
+            <div class="hero-background">
+                <video src="videos/hero-background.mp4" autoplay muted loop playsinline></video>
+                <div class="video-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title" data-splitting>Sculpted by Light<br>Defined by Art</h1>
+                <div class="hero-button-container">
+                    <a href="#collections" class="cs-button-solid" id="hero-explore-btn">Explore Collections</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="welcome" class="welcome-section">
+            <div class="container">
+                <h2>Artistry in Glass, For the Modern Home.</h2>
+                <p>Discover a world where light and color converge. Our collection of handcrafted glass is designed not just to hold, but to be a statement of elegance and artistry in any space.</p>
+                <a href="about.html" class="cs-button-outline">Discover Our Story</a>
+            </div>
+        </section>
+
+        <section id="collections" class="full-page">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title" data-splitting>Shop by Category</h2>
+                </div>
+                <div class="collection-grid">
+                    <a href="products.html?category=Vases" class="collection-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="collection-image-wrapper">
+                            <img src="img/vases/Amethyst Serenade.png" alt="Vases Collection">
+                        </div>
+                        <h3 class="collection-title">Vases</h3>
+                    </a>
+                    <a href="products.html?category=Glassware" class="collection-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="collection-image-wrapper">
+                            <img src="img/Glassware/Obsidian Ginkgo.png" alt="Glassware Collection">
+                        </div>
+                        <h3 class="collection-title">Glassware</h3>
+                    </a>
+                    <a href="products.html?category=Decor" class="collection-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="collection-image-wrapper">
+                            <img src="img/decor/Azure Ginkgo.jpg" alt="Decor Series">
+                        </div>
+                        <h3 class="collection-title">Decor</h3>
+                    </a>
+                    <a href="products.html?category=Bowls" class="collection-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="collection-image-wrapper">
+                           <img src="img/bowls/Golden Blush Alabaster.png" alt="Bowls Series">
+                        </div>
+                        <h3 class="collection-title">Bowls</h3>
+                    </a>
+                    <a href="products.html?category=Candleholders" class="collection-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="collection-image-wrapper">
+                            <img src="img/candle holders/Gilded Flame.png" alt="Candleholders Series">
+                        </div>
+                        <h3 class="collection-title">Candleholders</h3>
+                    </a>
+                    <a href="products.html?category=Gift Sets" class="collection-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="collection-image-wrapper">
+                            <img src="img/Gift Sets/Midnight Frost.png" alt="Gift Sets">
+                        </div>
+                        <h3 class="collection-title">Gift Sets</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="bestsellers" class="bestsellers-section">
+            <div class="container" data-aos="fade-up">
+                <h2 class="section-title" data-splitting>Bestsellers</h2>
+                <div class="bestsellers-carousel-wrapper">
+                    <div id="react-root"></div>
+                </div>
+                <div class="bestsellers-static-button-wrapper">
+                    <a href="products.html" class="bestsellers-buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="artisan-master" style="padding: 100px 0; background-color: #fff;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 60px;">
+                    <h2 class="artisan-title" data-splitting>James Chan</h2>
+                    <p class="artisan-subtitle">Coloured Glaze Art Master</p>
+                </div>
+                <div class="artisan-grid">
+                    <div class="artisan-portrait">
+                        <video src="videos/master.mp4" autoplay muted loop playsinline alt="Video of artisan James Chan working"></video>
+                    </div>
+                    <div class="artisan-artwork-panel">
+                        <div class="artwork-gallery">
+                            <img src="img/bowls/Oceanic Opalescence.png" alt="Glass artwork by James Chan" id="gallery-image">
+                            <div class="gallery-nav prev" id="gallery-prev-btn"></div>
+                            <div class="gallery-nav next" id="gallery-next-btn"></div>
+                        </div>
+                        <div class="artwork-button-wrapper">
+                            <a href="products.html" class="cs-button-primary">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="artisan-continuation-video">
+                    <video src="videos/Creation.mp4" autoplay muted loop playsinline width="100%"></video>
+                </div>
+            </div>
+        </section>
+        
+        <section id="store-feature">
+            <div class="store-feature-block container two-column">
+                <div class="col-image" data-aos="fade-up">
+                    <div class="bg-img" style="background-image:url('img/others/guest.jpg');"></div>
+                </div>
+                <div class="col-text" data-aos="fade-up" data-aos-delay="100">
+                    <h2 data-splitting>A Personal Discovery</h2>
+                    <p>At GlassCloud, we believe each piece tells a story. Our Brisbane store is a serene space designed for you to explore, connect with, and discover unique, handcrafted Coloured Glaze that resonates with your personal style. It's more than a purchase; it's an experience.</p>
+                </div>
+            </div>
+            <div class="store-feature-block container two-column reverse">
+                <div class="col-image" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-img" style="background-image:url('img/others/store.jpg');"></div>
+                </div>
+                <div class="col-text" data-aos="fade-up">
+                    <h2 data-splitting>The Brisbane Showroom</h2>
+                    <p>Our carefully curated collection brings the finest artisanal coloured glaze to Brisbane. The showroom is a celebration of light and form, where modern design meets ancient craftsmanship. We invite you to visit and immerse yourself in the unparalleled beauty of Coloured Glaze art.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__brand">GlassCloud</div>
+        <p class="footer__copyright">
+            Â© Copyright 2025 by The Glass Cloud. All rights reserved. | <a href="#">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <div id="auth-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div id="auth-container">
+                <div id="login-view">
+                    <h2 class="auth-title">Welcome Back</h2>
+                    <p class="auth-subtitle">Sign in to continue your journey.</p>
+                    <form id="login-form">
+                        <input type="email" id="login-email" placeholder="Email Address" required>
+                        <input type="password" id="login-password" placeholder="Password" required>
+                        <button type="submit" class="auth-button">Login</button>
+                    </form>
+                    <p style="text-align:center; color: #aaa; margin: 20px 0 15px 0;">OR</p>
+                    <button type="button" id="google-login-btn" class="auth-button google-btn">
+                        <svg class="google-icon" viewBox="0 0 24 24"><path d="M22.56,12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26,1.37-1.04,2.53-2.21,3.31v2.77h3.57c2.08-1.92,3.28-4.74,3.28-8.09Z" fill="#4285F4"></path><path d="M12,23c2.97,0,5.46-.98,7.28-2.66l-3.57-2.77c-.98,.66-2.23,1.06-3.71,1.06-2.86,0-5.29-1.93-6.16-4.53H2.18v2.84C3.99,20.53,7.7,23,12,23Z" fill="#34A853"></path><path d="M5.84,14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43,.35-2.09V7.07H2.18C1.43,8.55,1,10.22,1,12s.43,3.45,1.18,4.93l3.66-2.84Z" fill="#FBBC05"></path><path d="M12,5.38c1.62,0,3.06,.56,4.21,1.64l3.15-3.15C17.45,2.09,14.97,1,12,1,7.7,1,3.99,3.47,2.18,7.07l3.66,2.84c.87-2.6,3.3-4.53,6.16-4.53Z" fill="#EA4335"></path></svg>
+                        <span>Sign in with Google</span>
+                    </button>
+                    <p class="auth-switch">Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+                </div>
+                <div id="signup-view" style="display: none;">
+                    <h2 class="auth-title">Create an Account</h2>
+                    <p class="auth-subtitle">Join us and discover unique artistry.</p>
+                    <form id="signup-form">
+                        <input type="email" id="signup-email" placeholder="Email Address" required>
+                        <input type="password" id="signup-password" placeholder="Password (min. 6 characters)" required>
+                        <button type="submit" class="auth-button">Create Account</button>
+                    </form>
+                    <p class="auth-switch">Already have an account? <a href="#" id="show-login">Log In</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="logout-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="auth-title">You are logged in</h2>
+            <p class="auth-subtitle" id="logout-email-display" style="margin-bottom: 30px;"></p>
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <button class="auth-button" id="logout-switch-btn">Switch Account</button>
+                <button class="auth-button" id="logout-confirm-btn" style="background-color: #a0a0a0;">Log Out</button>
+            </div>
+        </div>
+    </div>    
+
+    <div id="cart-sidebar">
+        <button class="cart-close">&times;</button>
+        <h2>Your Cart</h2>
+        <div id="cart-items-container"></div>
+        <div id="cart-footer" style="display: none;">
+            <h3>Total: $<span id="cart-total-price">0.00</span></h3>
+            <button id="checkout-btn">Checkout</button>
+        </div>
+    </div>
+    
+    <div id="notification"></div>
+
+    <div class="cookie-consent-banner" id="cookie-banner">
+        <p>We use cookies to ensure you get the best experience on our website. </p>
+        <button class="cookie-accept-btn" id="cookie-accept-btn">Accept</button>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/babel" src="js/react.js"></script>    
+</body>
+</html>

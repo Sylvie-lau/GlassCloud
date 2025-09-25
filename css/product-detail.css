@@ -1,0 +1,210 @@
+.product-detail-container {
+    padding-top: 140px;
+    padding-bottom: 60px;
+}
+
+.product-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 60px;
+    padding: 0 20px;
+}
+
+.product-image-panel img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.product-info-panel .product-category {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-color-light);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.product-info-panel h1 {
+    font-family: var(--font-primary);
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+}
+
+.product-info-panel .product-price {
+    font-family: var(--font-primary);
+    font-size: 2.2rem;
+    color: var(--text-color-dark);
+    margin-bottom: 30px;
+}
+
+.product-info-panel .product-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-color-light);
+    margin-bottom: 40px;
+    border-left: 3px solid var(--accent-primary);
+    padding-left: 20px;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    max-width: 350px;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background: var(--text-color-dark);
+    color: #fff;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(74, 85, 104, 0.3);
+}
+
+.add-to-cart-btn:hover {
+    background: #2a2e3a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(74, 85, 104, 0.4);
+}
+
+.related-products {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.related-products h2 {
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--text-color-dark);
+}
+
+.swiper-container {
+    width: 100%;
+    padding: 10px 0 20px;
+    overflow: visible;
+}
+
+.swiper-wrapper {
+    align-items: stretch;
+}
+
+.swiper-slide {
+    text-align: center;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.related-product-card {
+    text-decoration: none;
+    color: var(--text-color-dark);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--bg-base);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.related-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-primary);
+}
+
+.related-product-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 0;
+    transition: transform 0.4s ease;
+}
+
+.related-product-card:hover img {
+    transform: scale(1.05);
+}
+
+.related-product-info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.related-product-card h3 {
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.related-product-card .price {
+    font-size: 1rem;
+    color: var(--text-color-dark);
+    font-weight: 600;
+    margin-top: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--text-color-dark);
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 18px;
+}
+
+.no-related-products {
+    text-align: center;
+    color: var(--text-color-light);
+    padding: 40px 20px;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .product-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .product-info-panel h1 {
+        font-size: 2.2rem;
+    }
+    
+    .product-info-panel .product-price {
+        font-size: 1.8rem;
+    }
+    
+    .related-products {
+        padding: 30px 20px;
+    }
+    
+    .related-products h2 {
+        font-size: 1.5rem;
+    }
+}
