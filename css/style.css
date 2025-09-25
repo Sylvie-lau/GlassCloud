@@ -1318,6 +1318,9 @@ body {
     .nav__links-desktop {
         display: none;
     }
+    .nav__logo-center {
+        display: none;
+    }
     .nav__logo {
         display: none;
     }
