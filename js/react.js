@@ -54,7 +54,7 @@ function BestsellersCarousel() {
                 setIsTransitioning(false);
                 setCurrentIndex(1);
                 setTimeout(() => setIsTransitioning(true), 50);
-            }, 1200);
+            }, 1150);
             return () => clearTimeout(timer);
         }
         if (currentIndex === 0) {
@@ -62,7 +62,7 @@ function BestsellersCarousel() {
                 setIsTransitioning(false);
                 setCurrentIndex(itemsToShow.length - 2);
                 setTimeout(() => setIsTransitioning(true), 50);
-            }, 1200);
+            }, 1150);
             return () => clearTimeout(timer);
         }
     }, [currentIndex, itemsToShow.length]);
