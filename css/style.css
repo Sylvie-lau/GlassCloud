@@ -134,6 +134,25 @@ body {
     flex: 1;
 }
 
+.social-icons {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.social-icons a {
+    color: var(--text-color-dark);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: var(--accent-primary);
+}
+
 .nav__container--center {
     justify-content: center;
     position: absolute;
